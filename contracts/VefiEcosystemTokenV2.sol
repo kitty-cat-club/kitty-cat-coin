@@ -1,10 +1,10 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "./helpers/TransferHelpers.sol";
 
 contract VefiEcosystemTokenV2 is Ownable, AccessControl, ERC20 {
   using SafeMath for uint256;
@@ -81,7 +81,7 @@ contract VefiEcosystemTokenV2 is Ownable, AccessControl, ERC20 {
       address[] memory holdersWithSufficientBalance = new address[](internalHolders.length);
 
       for (uint256 i = 0; i < internalHolders.length; i++) {
-        if (IERC20(address(this)).balanceOf(internalHolders[i]) > 0) {
+        if (balanceOf(internalHolders[i]) > 0) {
           holdersWithSufficientBalance[i] = internalHolders[i];
         }
       }
@@ -152,11 +152,8 @@ contract VefiEcosystemTokenV2 is Ownable, AccessControl, ERC20 {
 
   function addLiquidityPool(address lp) external onlyOwner {
     uint256 index = _indexOfList(liquidityPools, lp);
-    if (index == uint256(int256(-1))) {
-      liquidityPools.push(lp);
-    } else {
-      revert("lp_already_in_list");
-    }
+    require(index == uint256(int256(-1)), "lp_already_in_list");
+    liquidityPools.push(lp);
   }
 
   function removeLiquidityPool(address lp) external onlyOwner {
@@ -164,5 +161,17 @@ contract VefiEcosystemTokenV2 is Ownable, AccessControl, ERC20 {
     require(index > uint256(int256(-1)), "lp_not_in_list");
     address[] storage lps = liquidityPools;
     delete lps[index];
+  }
+
+  function retrieveEther(address to) external onlyOwner {
+    TransferHelpers._safeTransferEther(to, address(this).balance);
+  }
+
+  function retrieveERC20(
+    address token,
+    address to,
+    uint256 amount
+  ) external onlyOwner {
+    TransferHelpers._safeTransferERC20(token, to, amount);
   }
 }
