@@ -1999,18 +1999,6 @@ qs@^6.7.0:
   dependencies:
     side-channel "^1.0.4"
 
-quasar-v1-core@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/quasar-v1-core/-/quasar-v1-core-1.0.1.tgz#5b8294b762f2cf665c60e2934016bde7b3930998"
-  integrity sha512-DaU+lrkwYHqN57kAGFYYVTvcZ9cA6d/UBsnosbfqGthHzfwFPRtfoAzJioGCtK0UbF7NHFF7V+whkzTqmXKvHw==
-
-quasar-v1-periphery@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/quasar-v1-periphery/-/quasar-v1-periphery-2.0.0.tgz#0da64e3551053bf7a642a44c2fe7c49bf5ef5040"
-  integrity sha512-oeIQCr2VHEUJFTLlS5TTPEiR4S43e76LrXETp8bNztGXzvQI/vZowGiEZJ3ks57jujug/adhwNQrUkKS5P3gnA==
-  dependencies:
-    quasar-v1-core "^1.0.1"
-
 queue-microtask@^1.2.2, queue-microtask@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"

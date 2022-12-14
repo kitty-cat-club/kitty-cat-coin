@@ -1,55 +1,6 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/VefiEcosystemTokenV2.sol": {
-      "lastModificationDate": 1670978193607,
-      "contentHash": "e6fa1c2660cf96b4fed899043049a6f6",
-      "sourceName": "contracts/VefiEcosystemTokenV2.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "viaIR": true,
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "@openzeppelin/contracts/access/AccessControl.sol",
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/utils/math/SafeMath.sol",
-        "quasar-v1-periphery/contracts/interfaces/IQuasarRouter02.sol",
-        "quasar-v1-core/contracts/interfaces/IQuasarFactory.sol",
-        "./interfaces/ISphynxRouter.sol",
-        "./interfaces/ISphynxFactory.sol",
-        "./interfaces/IUniswapv2Factory.sol",
-        "./interfaces/IUniswapv2Router.sol",
-        "./helpers/TransferHelpers.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "VefiEcosystemTokenV2"
-      ]
-    },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/helpers/TransferHelpers.sol": {
       "lastModificationDate": 1667555608753,
       "contentHash": "2eb74f65e6199477a4eeece6cf4ae95d",
@@ -64,29 +15,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "@openzeppelin/contracts/utils/Address.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "TransferHelpers"
-      ]
+      "imports": ["@openzeppelin/contracts/utils/Address.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["TransferHelpers"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1667537484588,
@@ -102,29 +39,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Ownable"
-      ]
+      "imports": ["../utils/Context.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Ownable"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
       "lastModificationDate": 1667537484588,
@@ -140,16 +63,8 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
@@ -160,12 +75,8 @@
         "../utils/Strings.sol",
         "../utils/introspection/ERC165.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControl"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["AccessControl"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
       "lastModificationDate": 1667537485012,
@@ -181,31 +92,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "./IERC20.sol",
-        "./extensions/IERC20Metadata.sol",
-        "../../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC20"
-      ]
+      "imports": ["./IERC20.sol", "./extensions/IERC20Metadata.sol", "../../utils/Context.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC20"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
       "lastModificationDate": 1667537485012,
@@ -221,27 +116,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["SafeMath"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1667537484592,
@@ -257,27 +140,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Address"
-      ]
+      "versionPragmas": ["^0.8.1"],
+      "artifacts": ["Address"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1667537484592,
@@ -293,27 +164,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Context"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Context"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
       "lastModificationDate": 1667537484588,
@@ -329,27 +188,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IAccessControl"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IAccessControl"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
       "lastModificationDate": 1667537484592,
@@ -365,27 +212,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Strings"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
       "lastModificationDate": 1667537485012,
@@ -401,29 +236,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "./IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC165"
-      ]
+      "imports": ["./IERC165.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC165"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
       "lastModificationDate": 1667537485012,
@@ -439,27 +260,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC165"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC165"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1667537485012,
@@ -475,27 +284,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC20"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC20"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
       "lastModificationDate": 1667537485156,
@@ -511,29 +308,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "../IERC20.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC20Metadata"
-      ]
+      "imports": ["../IERC20.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC20Metadata"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/interfaces/ISphynxRouter.sol": {
       "lastModificationDate": 1670948891535,
@@ -549,28 +332,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ISphynxRouter",
-        "ISphynxRouter01"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ISphynxRouter", "ISphynxRouter01"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/interfaces/ISphynxFactory.sol": {
       "lastModificationDate": 1670949065496,
@@ -586,30 +356,53 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ISphynxFactory"]
+    },
+    "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/VefiEcosystemTokenUpdated.sol": {
+      "lastModificationDate": 1670981963663,
+      "contentHash": "41b1791cd81c9a419839fbe1e2f8d108",
+      "sourceName": "contracts/VefiEcosystemTokenUpdated.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/access/AccessControl.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/math/SafeMath.sol",
+        "./interfaces/ISphynxRouter.sol",
+        "./interfaces/ISphynxFactory.sol",
+        "./interfaces/IUniswapv2Factory.sol",
+        "./interfaces/IUniswapv2Router.sol",
+        "./helpers/TransferHelpers.sol"
       ],
-      "artifacts": [
-        "ISphynxFactory"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["VefiEcosystemTokenUpdated"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/interfaces/IUniswapv2Factory.sol": {
-      "lastModificationDate": 1670954869507,
+      "lastModificationDate": 1670981963063,
       "contentHash": "81ecba4d6007861550e46a121ccda58d",
       "sourceName": "contracts/interfaces/IUniswapv2Factory.sol",
       "solcConfig": {
@@ -622,30 +415,18 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IUniswapV2Factory"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IUniswapV2Factory"]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/interfaces/IUniswapv2Router.sol": {
-      "lastModificationDate": 1670954869627,
+      "lastModificationDate": 1670981963139,
       "contentHash": "dfd82ec45e68f4d014ebef58b5c3a2f1",
       "sourceName": "contracts/interfaces/IUniswapv2Router.sol",
       "solcConfig": {
@@ -658,138 +439,15 @@
           "viaIR": true,
           "outputSelection": {
             "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
+              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IUniswapV2Router01",
-        "IUniswapV2Router02"
-      ]
-    },
-    "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/quasar-v1-periphery/contracts/interfaces/IQuasarRouter02.sol": {
-      "lastModificationDate": 1670948249517,
-      "contentHash": "571a1f5604b1b45d7dd91eff00968455",
-      "sourceName": "quasar-v1-periphery/contracts/interfaces/IQuasarRouter02.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "viaIR": true,
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IQuasarRouter.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IQuasarRouter02"
-      ]
-    },
-    "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/quasar-v1-core/contracts/interfaces/IQuasarFactory.sol": {
-      "lastModificationDate": 1670947986855,
-      "contentHash": "57d012c0776cd535cca4f4a40ee43120",
-      "sourceName": "quasar-v1-core/contracts/interfaces/IQuasarFactory.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "viaIR": true,
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IQuasarFactory"
-      ]
-    },
-    "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/quasar-v1-periphery/contracts/interfaces/IQuasarRouter.sol": {
-      "lastModificationDate": 1670948249517,
-      "contentHash": "eee3666bf5608584d23ede6087d9996b",
-      "sourceName": "quasar-v1-periphery/contracts/interfaces/IQuasarRouter.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "viaIR": true,
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IQuasarRouter"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IUniswapV2Router01", "IUniswapV2Router02"]
     }
   }
 }

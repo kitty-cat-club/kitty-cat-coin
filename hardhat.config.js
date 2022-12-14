@@ -7,21 +7,21 @@ require("dotenv").config();
  */
 module.exports = {
   solidity: {
-    version: '0.8.17',
+    version: "0.8.17",
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200,
+        runs: 200
       },
-      viaIR: true,
-    },
+      viaIR: true
+    }
   },
   networks: {
     bitgert_mainnet: {
       url: "https://nodes.vefinetwork.org/bitgert",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 32520,
-      gas: 7100000,
+      gas: 91000000,
       gasPrice: 20000000000
     }
   }

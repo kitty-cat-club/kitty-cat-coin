@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat");
 
 (async () => {
-  const TokenFactory = await ethers.getContractFactory("VefiEcosystemTokenV2");
+  const TokenFactory = await ethers.getContractFactory("VefiEcosystemTokenUpdated");
   console.log("Deploying...");
   let token = await TokenFactory.deploy(
     "Vefi Token",
