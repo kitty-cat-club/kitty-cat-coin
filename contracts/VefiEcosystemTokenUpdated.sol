@@ -7,8 +7,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "./interfaces/ISphynxRouter.sol";
 import "./interfaces/ISphynxFactory.sol";
-import "./interfaces/IUniswapv2Factory.sol";
-import "./interfaces/IUniswapv2Router.sol";
 import "./helpers/TransferHelpers.sol";
 
 contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
@@ -20,7 +18,6 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
   bytes32 public liquidityExclusionPrivilege = keccak256(abi.encode("LIQUIDITY_EXCLUSION_PRIVILEGE"));
 
   ISphynxRouter sRouter;
-  IUniswapV2Router02 uRouter;
 
   uint8 public taxPercentage;
   uint8 public liquidityPercentageForEcosystem = 8;
@@ -49,15 +46,11 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
     _grantRole(taxExclusionPrivilege, _msgSender());
     _grantRole(taxExclusionPrivilege, _taxCollector);
     sRouter = ISphynxRouter(0x83f465457c8caFbe85aBB941F20291F826C7F72A);
-    uRouter = IUniswapV2Router02(0xBb5e1777A331ED93E07cF043363e48d320eb96c4);
 
-    address pair1 = ISphynxFactory(sRouter.factory()).createPair(sRouter.WETH(), address(this));
-    address pair2 = IUniswapV2Factory(uRouter.factory()).createPair(uRouter.WETH(), address(this));
+    address pair = ISphynxFactory(sRouter.factory()).createPair(sRouter.WETH(), address(this));
 
-    _grantRole(liquidityExclusionPrivilege, pair1);
-    _grantRole(liquidityExclusionPrivilege, pair2);
+    _grantRole(liquidityExclusionPrivilege, pair);
     _grantRole(liquidityExclusionPrivilege, address(sRouter));
-    _grantRole(liquidityExclusionPrivilege, address(uRouter));
   }
 
   function _splitFeesFromTransfer(uint256 amount)
@@ -93,22 +86,11 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
   }
 
   function _addLiquidity(uint256 tokenAmount, uint256 etherAmount) private {
-    (uint256 splitTAmount, uint256 splitEAmount) = (tokenAmount.div(2), etherAmount.div(2));
+    _approve(address(this), address(sRouter), tokenAmount);
 
-    _approve(address(this), address(sRouter), splitTAmount);
-    _approve(address(this), address(uRouter), splitTAmount);
-
-    sRouter.addLiquidityETH{value: splitEAmount}(
+    sRouter.addLiquidityETH{value: etherAmount}(
       address(this),
-      splitTAmount,
-      0,
-      0,
-      address(this),
-      block.timestamp.add(60 * 20)
-    );
-    uRouter.addLiquidityETH{value: splitEAmount}(
-      address(this),
-      splitTAmount,
+      tokenAmount,
       0,
       0,
       address(this),
@@ -117,39 +99,21 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
   }
 
   function _swapThisTokenForEth(uint256 amount) private {
-    uint256 splitForPools = amount.div(2);
+    _approve(address(this), address(sRouter), amount);
 
-    _approve(address(this), address(sRouter), splitForPools);
-    _approve(address(this), address(uRouter), splitForPools);
+    ISphynxFactory factory = ISphynxFactory(sRouter.factory());
+    address[] memory path = new address[](2);
+    path[0] = address(this);
+    path[1] = sRouter.WETH();
 
-    {
-      ISphynxFactory factory = ISphynxFactory(sRouter.factory());
-      address[] memory path = new address[](2);
-      path[0] = address(this);
-      path[1] = sRouter.WETH();
-
-      if (IERC20(sRouter.WETH()).balanceOf(factory.getPair(address(this), sRouter.WETH())) > 0)
-        sRouter.swapExactTokensForETHSupportingFeeOnTransferTokens(
-          splitForPools,
-          0,
-          path,
-          taxCollector,
-          block.timestamp.add(60 * 20)
-        );
-    }
-    {
-      IUniswapV2Factory factory = IUniswapV2Factory(uRouter.factory());
-      address[] memory path = new address[](2);
-
-      if (IERC20(uRouter.WETH()).balanceOf(factory.getPair(address(this), uRouter.WETH())) > 0)
-        uRouter.swapExactTokensForETHSupportingFeeOnTransferTokens(
-          splitForPools,
-          0,
-          path,
-          taxCollector,
-          block.timestamp.add(60 * 20)
-        );
-    }
+    if (IERC20(sRouter.WETH()).balanceOf(factory.getPair(address(this), sRouter.WETH())) > 0)
+      sRouter.swapExactTokensForETHSupportingFeeOnTransferTokens(
+        amount,
+        0,
+        path,
+        address(this),
+        block.timestamp.add(60 * 20)
+      );
   }
 
   function _transfer(
@@ -207,10 +171,6 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
 
   function setSphynxRouter(address router) external onlyOwner {
     sRouter = ISphynxRouter(router);
-  }
-
-  function setIUniswapV2Router(address router) external onlyOwner {
-    uRouter = IUniswapV2Router02(router);
   }
 
   function setMinHoldOfTokenForContract(uint256 minHold) external onlyOwner {

@@ -20,9 +20,7 @@ module.exports = {
     bitgert_mainnet: {
       url: "https://nodes.vefinetwork.org/bitgert",
       accounts: [process.env.PRIVATE_KEY],
-      chainId: 32520,
-      gas: 91000000,
-      gasPrice: 20000000000
+      chainId: 32520
     }
   }
 };
