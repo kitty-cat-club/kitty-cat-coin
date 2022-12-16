@@ -1,3 +1,4 @@
 node_modules
 .env
 standard-input.json
+*Flat.sol
