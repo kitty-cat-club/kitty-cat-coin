@@ -1,6 +1,6 @@
 pragma solidity ^0.8.0;
 
-interface ISphynxFactory {
+interface IOKCSwapFactory {
   event PairCreated(address indexed token0, address indexed token1, address pair, uint256);
 
   function feeTo() external view returns (address);
@@ -18,6 +18,4 @@ interface ISphynxFactory {
   function setFeeTo(address) external;
 
   function setFeeToSetter(address) external;
-
-  function setSwapFee(address _pair, uint32 _swapFee) external;
 }

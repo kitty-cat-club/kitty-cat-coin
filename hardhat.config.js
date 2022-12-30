@@ -20,6 +20,11 @@ module.exports = {
       url: "https://nodes.vefinetwork.org/bitgert",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 32520
+    },
+    okx_mainnet: {
+      url: "https://exchainrpc.okex.org",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 66
     }
   }
 };

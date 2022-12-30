@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "ISphynxFactory",
-  "sourceName": "contracts/interfaces/ISphynxFactory.sol",
+  "contractName": "IOKCSwapFactory",
+  "sourceName": "contracts/interfaces/IOKCSwapFactory.sol",
   "abi": [
     {
       "anonymous": false,
@@ -162,24 +162,6 @@
         }
       ],
       "name": "setFeeToSetter",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_pair",
-          "type": "address"
-        },
-        {
-          "internalType": "uint32",
-          "name": "_swapFee",
-          "type": "uint32"
-        }
-      ],
-      "name": "setSwapFee",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"

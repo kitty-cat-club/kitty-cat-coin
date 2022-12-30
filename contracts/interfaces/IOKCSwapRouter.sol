@@ -1,9 +1,11 @@
 pragma solidity ^0.8.0;
 
-interface ISphynxRouter01 {
+interface IOKCSwapRouter01 {
   function factory() external pure returns (address);
 
-  function WETH() external pure returns (address);
+  function WOKT() external pure returns (address);
+
+  function pairCodeHash() external pure returns (bytes32);
 
   function addLiquidity(
     address tokenA,
@@ -22,11 +24,11 @@ interface ISphynxRouter01 {
       uint256 liquidity
     );
 
-  function addLiquidityETH(
+  function addLiquidityOKT(
     address token,
     uint256 amountTokenDesired,
     uint256 amountTokenMin,
-    uint256 amountETHMin,
+    uint256 amountOKTMin,
     address to,
     uint256 deadline
   )
@@ -34,7 +36,7 @@ interface ISphynxRouter01 {
     payable
     returns (
       uint256 amountToken,
-      uint256 amountETH,
+      uint256 amountOKT,
       uint256 liquidity
     );
 
@@ -48,14 +50,14 @@ interface ISphynxRouter01 {
     uint256 deadline
   ) external returns (uint256 amountA, uint256 amountB);
 
-  function removeLiquidityETH(
+  function removeLiquidityOKT(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountETHMin,
+    uint256 amountOKTMin,
     address to,
     uint256 deadline
-  ) external returns (uint256 amountToken, uint256 amountETH);
+  ) external returns (uint256 amountToken, uint256 amountOKT);
 
   function removeLiquidityWithPermit(
     address tokenA,
@@ -71,18 +73,18 @@ interface ISphynxRouter01 {
     bytes32 s
   ) external returns (uint256 amountA, uint256 amountB);
 
-  function removeLiquidityETHWithPermit(
+  function removeLiquidityOKTWithPermit(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountETHMin,
+    uint256 amountOKTMin,
     address to,
     uint256 deadline,
     bool approveMax,
     uint8 v,
     bytes32 r,
     bytes32 s
-  ) external returns (uint256 amountToken, uint256 amountETH);
+  ) external returns (uint256 amountToken, uint256 amountOKT);
 
   function swapExactTokensForTokens(
     uint256 amountIn,
@@ -100,14 +102,14 @@ interface ISphynxRouter01 {
     uint256 deadline
   ) external returns (uint256[] memory amounts);
 
-  function swapExactETHForTokens(
+  function swapExactOKTForTokens(
     uint256 amountOutMin,
     address[] calldata path,
     address to,
     uint256 deadline
   ) external payable returns (uint256[] memory amounts);
 
-  function swapTokensForExactETH(
+  function swapTokensForExactOKT(
     uint256 amountOut,
     uint256 amountInMax,
     address[] calldata path,
@@ -115,7 +117,7 @@ interface ISphynxRouter01 {
     uint256 deadline
   ) external returns (uint256[] memory amounts);
 
-  function swapExactTokensForETH(
+  function swapExactTokensForOKT(
     uint256 amountIn,
     uint256 amountOutMin,
     address[] calldata path,
@@ -123,7 +125,7 @@ interface ISphynxRouter01 {
     uint256 deadline
   ) external returns (uint256[] memory amounts);
 
-  function swapETHForExactTokens(
+  function swapOKTForExactTokens(
     uint256 amountOut,
     address[] calldata path,
     address to,
@@ -139,15 +141,13 @@ interface ISphynxRouter01 {
   function getAmountOut(
     uint256 amountIn,
     uint256 reserveIn,
-    uint256 reserveOut,
-    uint256 swapFee
+    uint256 reserveOut
   ) external pure returns (uint256 amountOut);
 
   function getAmountIn(
     uint256 amountOut,
     uint256 reserveIn,
-    uint256 reserveOut,
-    uint256 swapFee
+    uint256 reserveOut
   ) external pure returns (uint256 amountIn);
 
   function getAmountsOut(uint256 amountIn, address[] calldata path) external view returns (uint256[] memory amounts);
@@ -155,28 +155,28 @@ interface ISphynxRouter01 {
   function getAmountsIn(uint256 amountOut, address[] calldata path) external view returns (uint256[] memory amounts);
 }
 
-interface ISphynxRouter is ISphynxRouter01 {
-  function removeLiquidityETHSupportingFeeOnTransferTokens(
+interface IOKCSwapRouter02 is IOKCSwapRouter01 {
+  function removeLiquidityOKTSupportingFeeOnTransferTokens(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountETHMin,
+    uint256 amountOKTMin,
     address to,
     uint256 deadline
-  ) external returns (uint256 amountETH);
+  ) external returns (uint256 amountOKT);
 
-  function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(
+  function removeLiquidityOKTWithPermitSupportingFeeOnTransferTokens(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountETHMin,
+    uint256 amountOKTMin,
     address to,
     uint256 deadline,
     bool approveMax,
     uint8 v,
     bytes32 r,
     bytes32 s
-  ) external returns (uint256 amountETH);
+  ) external returns (uint256 amountOKT);
 
   function swapExactTokensForTokensSupportingFeeOnTransferTokens(
     uint256 amountIn,
@@ -186,14 +186,14 @@ interface ISphynxRouter is ISphynxRouter01 {
     uint256 deadline
   ) external;
 
-  function swapExactETHForTokensSupportingFeeOnTransferTokens(
+  function swapExactOKTForTokensSupportingFeeOnTransferTokens(
     uint256 amountOutMin,
     address[] calldata path,
     address to,
     uint256 deadline
   ) external payable;
 
-  function swapExactTokensForETHSupportingFeeOnTransferTokens(
+  function swapExactTokensForOKTSupportingFeeOnTransferTokens(
     uint256 amountIn,
     uint256 amountOutMin,
     address[] calldata path,

@@ -5,11 +5,11 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "./interfaces/ISphynxRouter.sol";
-import "./interfaces/ISphynxFactory.sol";
+import "./interfaces/IOKCSwapRouter.sol";
+import "./interfaces/IOKCSwapFactory.sol";
 import "./helpers/TransferHelpers.sol";
 
-contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
+contract VefiEcosystemToken is Ownable, AccessControl, ERC20 {
   using SafeMath for uint256;
 
   address public taxCollector;
@@ -17,7 +17,7 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
   bytes32 public taxExclusionPrivilege = keccak256(abi.encode("TAX_EXCLUSION_PRIVILEGE"));
   bytes32 public liquidityExclusionPrivilege = keccak256(abi.encode("LIQUIDITY_EXCLUSION_PRIVILEGE"));
 
-  ISphynxRouter sRouter;
+  IOKCSwapRouter02 okcRouter;
 
   uint8 public taxPercentage;
   uint8 public liquidityPercentageForEcosystem = 8;
@@ -45,12 +45,12 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
     _mint(_msgSender(), amount);
     _grantRole(taxExclusionPrivilege, _msgSender());
     _grantRole(taxExclusionPrivilege, _taxCollector);
-    sRouter = ISphynxRouter(0x83f465457c8caFbe85aBB941F20291F826C7F72A);
+    okcRouter = IOKCSwapRouter02(0xc97b81B8a38b9146010Df85f1Ac714aFE1554343);
 
-    address pair = ISphynxFactory(sRouter.factory()).createPair(sRouter.WETH(), address(this));
+    address pair = IOKCSwapFactory(okcRouter.factory()).createPair(okcRouter.WOKT(), address(this));
 
     _grantRole(liquidityExclusionPrivilege, pair);
-    _grantRole(liquidityExclusionPrivilege, address(sRouter));
+    _grantRole(liquidityExclusionPrivilege, address(okcRouter));
   }
 
   function _splitFeesFromTransfer(uint256 amount)
@@ -86,9 +86,9 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
   }
 
   function _addLiquidity(uint256 tokenAmount, uint256 etherAmount) private {
-    _approve(address(this), address(sRouter), tokenAmount);
+    _approve(address(this), address(okcRouter), tokenAmount);
 
-    sRouter.addLiquidityETH{value: etherAmount}(
+    okcRouter.addLiquidityOKT{value: etherAmount}(
       address(this),
       tokenAmount,
       0,
@@ -99,15 +99,15 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
   }
 
   function _swapThisTokenForEth(uint256 amount) private {
-    _approve(address(this), address(sRouter), amount);
+    _approve(address(this), address(okcRouter), amount);
 
-    ISphynxFactory factory = ISphynxFactory(sRouter.factory());
+    IOKCSwapFactory factory = IOKCSwapFactory(okcRouter.factory());
     address[] memory path = new address[](2);
     path[0] = address(this);
-    path[1] = sRouter.WETH();
+    path[1] = okcRouter.WOKT();
 
-    if (IERC20(sRouter.WETH()).balanceOf(factory.getPair(address(this), sRouter.WETH())) > 0)
-      sRouter.swapExactTokensForETHSupportingFeeOnTransferTokens(
+    if (IERC20(okcRouter.WOKT()).balanceOf(factory.getPair(address(this), okcRouter.WOKT())) > 0)
+      okcRouter.swapExactTokensForOKTSupportingFeeOnTransferTokens(
         amount,
         0,
         path,
@@ -169,8 +169,8 @@ contract VefiEcosystemTokenUpdated is Ownable, AccessControl, ERC20 {
     _grantRole(taxExclusionPrivilege, _taxCollector);
   }
 
-  function setSphynxRouter(address router) external onlyOwner {
-    sRouter = ISphynxRouter(router);
+  function setOKCSwapRouter(address router) external onlyOwner {
+    okcRouter = IOKCSwapRouter02(router);
   }
 
   function setMinHoldOfTokenForContract(uint256 minHold) external onlyOwner {
