@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "IOKCSwapFactory",
-  "sourceName": "contracts/interfaces/IOKCSwapFactory.sol",
+  "contractName": "IPancakeFactory",
+  "sourceName": "contracts/interfaces/IPancakeFactory.sol",
   "abi": [
     {
       "anonymous": false,

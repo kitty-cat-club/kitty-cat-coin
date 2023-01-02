@@ -25,6 +25,11 @@ module.exports = {
       url: "https://exchainrpc.okex.org",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 66
+    },
+    astar_mainnet: {
+      url: "https://nodes.vefinetwork.org/astar",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 592
     }
   }
 };

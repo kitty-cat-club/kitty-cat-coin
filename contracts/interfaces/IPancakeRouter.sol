@@ -1,11 +1,9 @@
 pragma solidity ^0.8.0;
 
-interface IOKCSwapRouter01 {
+interface IPancakeRouter01 {
   function factory() external pure returns (address);
 
-  function WOKT() external pure returns (address);
-
-  function pairCodeHash() external pure returns (bytes32);
+  function WETH() external pure returns (address);
 
   function addLiquidity(
     address tokenA,
@@ -24,11 +22,11 @@ interface IOKCSwapRouter01 {
       uint256 liquidity
     );
 
-  function addLiquidityOKT(
+  function addLiquidityETH(
     address token,
     uint256 amountTokenDesired,
     uint256 amountTokenMin,
-    uint256 amountOKTMin,
+    uint256 amountETHMin,
     address to,
     uint256 deadline
   )
@@ -36,7 +34,7 @@ interface IOKCSwapRouter01 {
     payable
     returns (
       uint256 amountToken,
-      uint256 amountOKT,
+      uint256 amountETH,
       uint256 liquidity
     );
 
@@ -50,14 +48,14 @@ interface IOKCSwapRouter01 {
     uint256 deadline
   ) external returns (uint256 amountA, uint256 amountB);
 
-  function removeLiquidityOKT(
+  function removeLiquidityETH(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountOKTMin,
+    uint256 amountETHMin,
     address to,
     uint256 deadline
-  ) external returns (uint256 amountToken, uint256 amountOKT);
+  ) external returns (uint256 amountToken, uint256 amountETH);
 
   function removeLiquidityWithPermit(
     address tokenA,
@@ -73,18 +71,18 @@ interface IOKCSwapRouter01 {
     bytes32 s
   ) external returns (uint256 amountA, uint256 amountB);
 
-  function removeLiquidityOKTWithPermit(
+  function removeLiquidityETHWithPermit(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountOKTMin,
+    uint256 amountETHMin,
     address to,
     uint256 deadline,
     bool approveMax,
     uint8 v,
     bytes32 r,
     bytes32 s
-  ) external returns (uint256 amountToken, uint256 amountOKT);
+  ) external returns (uint256 amountToken, uint256 amountETH);
 
   function swapExactTokensForTokens(
     uint256 amountIn,
@@ -102,14 +100,14 @@ interface IOKCSwapRouter01 {
     uint256 deadline
   ) external returns (uint256[] memory amounts);
 
-  function swapExactOKTForTokens(
+  function swapExactETHForTokens(
     uint256 amountOutMin,
     address[] calldata path,
     address to,
     uint256 deadline
   ) external payable returns (uint256[] memory amounts);
 
-  function swapTokensForExactOKT(
+  function swapTokensForExactETH(
     uint256 amountOut,
     uint256 amountInMax,
     address[] calldata path,
@@ -117,7 +115,7 @@ interface IOKCSwapRouter01 {
     uint256 deadline
   ) external returns (uint256[] memory amounts);
 
-  function swapExactTokensForOKT(
+  function swapExactTokensForETH(
     uint256 amountIn,
     uint256 amountOutMin,
     address[] calldata path,
@@ -125,7 +123,7 @@ interface IOKCSwapRouter01 {
     uint256 deadline
   ) external returns (uint256[] memory amounts);
 
-  function swapOKTForExactTokens(
+  function swapETHForExactTokens(
     uint256 amountOut,
     address[] calldata path,
     address to,
@@ -155,28 +153,28 @@ interface IOKCSwapRouter01 {
   function getAmountsIn(uint256 amountOut, address[] calldata path) external view returns (uint256[] memory amounts);
 }
 
-interface IOKCSwapRouter02 is IOKCSwapRouter01 {
-  function removeLiquidityOKTSupportingFeeOnTransferTokens(
+interface IPancakeRouter02 is IPancakeRouter01 {
+  function removeLiquidityETHSupportingFeeOnTransferTokens(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountOKTMin,
+    uint256 amountETHMin,
     address to,
     uint256 deadline
-  ) external returns (uint256 amountOKT);
+  ) external returns (uint256 amountETH);
 
-  function removeLiquidityOKTWithPermitSupportingFeeOnTransferTokens(
+  function removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(
     address token,
     uint256 liquidity,
     uint256 amountTokenMin,
-    uint256 amountOKTMin,
+    uint256 amountETHMin,
     address to,
     uint256 deadline,
     bool approveMax,
     uint8 v,
     bytes32 r,
     bytes32 s
-  ) external returns (uint256 amountOKT);
+  ) external returns (uint256 amountETH);
 
   function swapExactTokensForTokensSupportingFeeOnTransferTokens(
     uint256 amountIn,
@@ -186,14 +184,14 @@ interface IOKCSwapRouter02 is IOKCSwapRouter01 {
     uint256 deadline
   ) external;
 
-  function swapExactOKTForTokensSupportingFeeOnTransferTokens(
+  function swapExactETHForTokensSupportingFeeOnTransferTokens(
     uint256 amountOutMin,
     address[] calldata path,
     address to,
     uint256 deadline
   ) external payable;
 
-  function swapExactTokensForOKTSupportingFeeOnTransferTokens(
+  function swapExactTokensForETHSupportingFeeOnTransferTokens(
     uint256 amountIn,
     uint256 amountOutMin,
     address[] calldata path,
