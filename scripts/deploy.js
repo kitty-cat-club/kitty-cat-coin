@@ -2,14 +2,14 @@ const { ethers } = require("hardhat");
 
 (async () => {
   try {
-    const TokenFactory = await ethers.getContractFactory("VefiEcosystemToken");
+    const TokenFactory = await ethers.getContractFactory("FrogCoin");
     console.log("Deploying...");
     let token = await TokenFactory.deploy(
-      "The Vefi Token",
-      "VEF",
-      ethers.utils.parseUnits("900000000", 18),
-      "0x8754e02Aab325BA8350257F48b9F91d7CeF80bA3",
-      8
+      "Frog Coin",
+      "FROG",
+      ethers.utils.parseUnits("2000000000000", 18),
+      "0xF0ce59c87592867da729AEb1AF728B9a988DecE9",
+      15
     );
     token = await token.deployed();
     console.log(token.address);

@@ -9,6 +9,7 @@
     "deploy:bitgert:mainnet": "npx hardhat run scripts/deploy.js --network bitgert_mainnet",
     "deploy:okc:mainnet": "npx hardhat run scripts/deploy.js --network okx_mainnet",
     "deploy:astar:mainnet": "npx hardhat run scripts/deploy.js --network astar_mainnet",
+    "deploy:smartchain:mainnet": "npx hardhat run scripts/deploy.js --network smartchain_mainnet",
     "flatten": "npx hardhat flatten contracts/VefiEcosystemToken.sol > VefiTokenFlat.sol"
   },
   "repository": {

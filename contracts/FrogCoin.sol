@@ -9,7 +9,7 @@ import "./interfaces/IPancakeRouter.sol";
 import "./interfaces/IPancakeFactory.sol";
 import "./helpers/TransferHelpers.sol";
 
-contract VefiEcosystemToken is Ownable, AccessControl, ERC20 {
+contract FrogCoin is Ownable, AccessControl, ERC20 {
   using SafeMath for uint256;
 
   address public taxCollector;
@@ -21,8 +21,8 @@ contract VefiEcosystemToken is Ownable, AccessControl, ERC20 {
 
   uint8 public taxPercentage;
   uint8 public liquidityPercentageForEcosystem = 8;
-  uint256 public maxAmount = 700000000 * 10**18;
-  uint256 public minHoldOfTokenForContract = 120000 * 10**18;
+  uint256 public maxAmount = 10000000 * 10**18;
+  uint256 public minHoldOfTokenForContract = 1200000 * 10**18;
 
   bool public swapAndLiquifyEnabled;
   bool public inSwapAndLiquify;
@@ -45,7 +45,7 @@ contract VefiEcosystemToken is Ownable, AccessControl, ERC20 {
     _mint(_msgSender(), amount);
     _grantRole(taxExclusionPrivilege, _msgSender());
     _grantRole(taxExclusionPrivilege, _taxCollector);
-    pancakeRouter = IPancakeRouter02(0xE915D2393a08a00c5A463053edD31bAe2199b9e7);
+    pancakeRouter = IPancakeRouter02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
 
     address pair = IPancakeFactory(pancakeRouter.factory()).createPair(pancakeRouter.WETH(), address(this));
 

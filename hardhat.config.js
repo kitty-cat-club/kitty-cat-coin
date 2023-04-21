@@ -30,6 +30,11 @@ module.exports = {
       url: "https://nodes.vefinetwork.org/astar",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 592
+    },
+    smartchain_mainnet: {
+      url: "https://bsc.publicnode.com",
+      accounts: [process.env.PRIVATE_KEY],
+      chainId: 56
     }
   }
 };
