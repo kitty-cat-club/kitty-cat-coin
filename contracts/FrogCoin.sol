@@ -45,7 +45,7 @@ contract FrogCoin is Ownable, AccessControl, ERC20 {
     _mint(_msgSender(), amount);
     _grantRole(taxExclusionPrivilege, _msgSender());
     _grantRole(taxExclusionPrivilege, _taxCollector);
-    pancakeRouter = IPancakeRouter02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
+    pancakeRouter = IPancakeRouter02(0xBb5e1777A331ED93E07cF043363e48d320eb96c4);
 
     address pair = IPancakeFactory(pancakeRouter.factory()).createPair(pancakeRouter.WETH(), address(this));
 

@@ -14,15 +14,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["@openzeppelin/contracts/utils/Address.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["TransferHelpers"]
+      "imports": [
+        "@openzeppelin/contracts/utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "TransferHelpers"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
       "lastModificationDate": 1667537484588,
@@ -37,8 +51,16 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
@@ -49,8 +71,12 @@
         "../utils/Strings.sol",
         "../utils/introspection/ERC165.sol"
       ],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["AccessControl"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1667537484588,
@@ -65,15 +91,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["../utils/Context.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["Ownable"]
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
       "lastModificationDate": 1667537485012,
@@ -88,15 +128,31 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["./IERC20.sol", "./extensions/IERC20Metadata.sol", "../../utils/Context.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["ERC20"]
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1667537485012,
@@ -111,15 +167,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IERC20"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
       "lastModificationDate": 1667537485012,
@@ -134,15 +202,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["SafeMath"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1667537484592,
@@ -157,15 +237,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.1"],
-      "artifacts": ["Address"]
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
       "lastModificationDate": 1667537484592,
@@ -180,15 +272,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["Strings"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
       "lastModificationDate": 1667537484588,
@@ -203,15 +307,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IAccessControl"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1667537484592,
@@ -226,15 +342,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["Context"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
       "lastModificationDate": 1667537485012,
@@ -249,15 +377,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["./IERC165.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["ERC165"]
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
       "lastModificationDate": 1667537485012,
@@ -272,15 +414,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IERC165"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
       "lastModificationDate": 1667537485156,
@@ -295,15 +449,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["../IERC20.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IERC20Metadata"]
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/VefiEcosystemToken.sol": {
       "lastModificationDate": 1672635399939,
@@ -318,8 +486,16 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
@@ -334,8 +510,12 @@
         "./interfaces/IPancakeFactory.sol",
         "./helpers/TransferHelpers.sol"
       ],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["VefiEcosystemToken"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "VefiEcosystemToken"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/interfaces/IPancakeRouter.sol": {
       "lastModificationDate": 1672634851503,
@@ -350,15 +530,28 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IPancakeRouter01", "IPancakeRouter02"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPancakeRouter01",
+        "IPancakeRouter02"
+      ]
     },
     "/home/kingsley/Code-Projects/vefi-updated-token-contract/contracts/interfaces/IPancakeFactory.sol": {
       "lastModificationDate": 1672634696427,
@@ -373,19 +566,31 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IPancakeFactory"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPancakeFactory"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/contracts/FrogCoin.sol": {
-      "lastModificationDate": 1681929598939,
-      "contentHash": "e742f7293a6615442f27f65f85a2070f",
+      "lastModificationDate": 1682420340956,
+      "contentHash": "51fdf0a68ff45a9e380cb287f52274a0",
       "sourceName": "contracts/FrogCoin.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -396,8 +601,16 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
@@ -412,8 +625,12 @@
         "./interfaces/IPancakeFactory.sol",
         "./helpers/TransferHelpers.sol"
       ],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["FrogCoin"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "FrogCoin"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/contracts/interfaces/IPancakeRouter.sol": {
       "lastModificationDate": 1681929160458,
@@ -428,15 +645,28 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IPancakeRouter01", "IPancakeRouter02"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPancakeRouter01",
+        "IPancakeRouter02"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/contracts/interfaces/IPancakeFactory.sol": {
       "lastModificationDate": 1681929160458,
@@ -451,15 +681,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IPancakeFactory"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPancakeFactory"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/contracts/helpers/TransferHelpers.sol": {
       "lastModificationDate": 1681929160458,
@@ -474,15 +716,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["@openzeppelin/contracts/utils/Address.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["TransferHelpers"]
+      "imports": [
+        "@openzeppelin/contracts/utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "TransferHelpers"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
       "lastModificationDate": 1681929222343,
@@ -497,8 +753,16 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
@@ -509,8 +773,12 @@
         "../utils/Strings.sol",
         "../utils/introspection/ERC165.sol"
       ],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["AccessControl"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1681929222343,
@@ -525,15 +793,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["../utils/Context.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["Ownable"]
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
       "lastModificationDate": 1681929223743,
@@ -548,15 +830,31 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["./IERC20.sol", "./extensions/IERC20Metadata.sol", "../../utils/Context.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["ERC20"]
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1681929223743,
@@ -571,15 +869,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IERC20"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
       "lastModificationDate": 1681929223747,
@@ -594,15 +904,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["SafeMath"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1681929222347,
@@ -617,15 +939,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.1"],
-      "artifacts": ["Address"]
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
       "lastModificationDate": 1681929222343,
@@ -640,15 +974,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IAccessControl"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1681929222347,
@@ -663,15 +1009,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["Context"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
       "lastModificationDate": 1681929222347,
@@ -686,15 +1044,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["Strings"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
       "lastModificationDate": 1681929223743,
@@ -709,15 +1079,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["./IERC165.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["ERC165"]
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
       "lastModificationDate": 1681929223743,
@@ -732,15 +1116,27 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IERC165"]
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
     },
     "/home/kingsley/Code-Projects/frog-coin/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
       "lastModificationDate": 1681929224119,
@@ -755,15 +1151,29 @@
           },
           "outputSelection": {
             "*": {
-              "*": ["abi", "evm.bytecode", "evm.deployedBytecode", "evm.methodIdentifiers", "metadata"],
-              "": ["ast"]
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
             }
           }
         }
       },
-      "imports": ["../IERC20.sol"],
-      "versionPragmas": ["^0.8.0"],
-      "artifacts": ["IERC20Metadata"]
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
     }
   }
 }
