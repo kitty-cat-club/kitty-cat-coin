@@ -9,7 +9,7 @@ import "./interfaces/IPancakeRouter.sol";
 import "./interfaces/IPancakeFactory.sol";
 import "./helpers/TransferHelpers.sol";
 
-contract FrogCoin is Ownable, AccessControl, ERC20 {
+contract KittyCatCoin is Ownable, AccessControl, ERC20 {
   using SafeMath for uint256;
 
   address public taxCollector;
@@ -20,7 +20,7 @@ contract FrogCoin is Ownable, AccessControl, ERC20 {
   IPancakeRouter02 pancakeRouter;
 
   uint8 public taxPercentage;
-  uint8 public liquidityPercentageForEcosystem = 8;
+  uint8 public liquidityPercentageForEcosystem = 12;
   uint256 public maxAmount = 10000000 * 10**18;
   uint256 public minHoldOfTokenForContract = 1200000 * 10**18;
 
@@ -45,7 +45,7 @@ contract FrogCoin is Ownable, AccessControl, ERC20 {
     _mint(_msgSender(), amount);
     _grantRole(taxExclusionPrivilege, _msgSender());
     _grantRole(taxExclusionPrivilege, _taxCollector);
-    pancakeRouter = IPancakeRouter02(0xBb5e1777A331ED93E07cF043363e48d320eb96c4);
+    pancakeRouter = IPancakeRouter02(0x83f465457c8caFbe85aBB941F20291F826C7F72A);
 
     address pair = IPancakeFactory(pancakeRouter.factory()).createPair(pancakeRouter.WETH(), address(this));
 
